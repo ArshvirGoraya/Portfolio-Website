@@ -2821,29 +2821,6 @@ body {
   justify-self: center;
 }
 
-.project-link-svg {
-  fill: var(--navbar-color);
-  stroke: var(--navbar-color);
-
-  transition: all 0.5s;
-
-  align-self: center;
-  max-height: 100%;
-}
-
-.project-link-svg_nexus {
-  stroke-width: 0;
-}
-
-.project-link-svg_itch {
-  stroke-width: 0;
-  /* Itch has no stroke, but giving it a stroke color makes the SVG look pixelated, at least on IOS. Unless, stroke-width is set to 0 */
-}
-
-.project-link-svg_download {
-  scale: 0.9;
-}
-
 .project-link-svg_download,
 .project-link-svg_download .st1 {
   stroke-width: 1;
@@ -2933,6 +2910,36 @@ body {
   stroke-width: 3;
   stroke-linejoin: round;
 }
+
+.project-link-svg {
+  fill: var(--navbar-color);
+  stroke: var(--navbar-color);
+
+  transition: all 0.5s;
+
+  align-self: center;
+  max-height: 100%;
+  stroke-linejoin: initial;
+}
+
+.project-link-svg_nexus {
+  stroke-width: 0;
+}
+
+.project-link-svg_itch {
+  stroke-width: 0;
+  /* Itch has no stroke, but giving it a stroke color makes the SVG look pixelated, at least on IOS. Unless, stroke-width is set to 0 */
+}
+
+.project-link-svg_download {
+  scale: 0.9;
+}
+
+.project-link-svg_external-link {
+  margin-top: 0.2em;
+  scale: 2;
+}
+
 
 @media (max-width: 1000px) {
   .project-page-article-section {
