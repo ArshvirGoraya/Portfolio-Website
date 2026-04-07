@@ -372,18 +372,6 @@
                   What I Learned</a
                 >
               </div>
-              <!-- <div class="project-page-articleNav-text-wrapper">
-                <div class="project-page-articleNav-marker"></div>
-                <a
-                  id="Challenge-link"
-                  class="project-page-nav-link"
-                  href="#Details"
-                  aria-label="jump to Details section"
-                  rel="noopener"
-                  referrerpolicy="strict-origin-when-cross-origin"
-                  >Details</a
-                >
-              </div> -->
               <div class="project-page-articleNav-text-wrapper">
                 <div class="project-page-articleNav-marker"></div>
                 <a
@@ -400,11 +388,10 @@
           </nav>
 
           <article class="project-page-article">
-            <!-- TODO: uncomment this -->
-            <!-- <section class="project-page-article-section Scroll_to demo-section">
+            <section class="project-page-article-section Scroll_to demo-section">
               <h2 id="Demo">Demo</h2>
               <hr />
-               <iframe id="iframe-demo" class="iframe-demo" allowfullscreen src="https://arshvirgoraya.github.io/3D-Sorting-Visualizer" title="Rust-Bevy 3D Sorting Visualizer Demo">
+               <iframe id="iframe-demo" class="iframe-demo" allow="clipboard-read; clipboard-write" allowfullscreen src="https://arshvirgoraya.github.io/3D-Sorting-Visualizer" title="Rust-Bevy 3D Sorting Visualizer Demo">
                 [Your browser does not support the html iframe tag :(]
                </iframe> 
                 <button id="fullscreen_btn" class="fullscreen_btn" aria-label="Enter Fullscreen">
@@ -415,7 +402,7 @@
                     <polyline points="20,20 24,20 28,24 28,20 32,20 32,32 20,32 20,28 24,28 20,24 20,20 "/>
                   </svg>
                 </button>
-            </section> -->
+            </section>
 
             <section class="project-page-article-section Scroll_to">
               <h2 id="Description">Description</h2>
@@ -810,285 +797,6 @@
                 </li>
               </ul>
             </section>
-
-
-<!-- 
-            <section class="project-page-article-section Scroll_to">
-              <h2 id="Learn">Biggest Challenge & What I Learned</h2>
-              <hr />
-              <div
-                class="project-page_description-and-video-wrapper project-page_description-and-video-wrapper_BiggestChallenge"
-              >
-                <div class="project-page-Media-and-Accordion-wrapper-float project-page-Media-and-Accordion-wrapper-float_sorting">
-                  <div
-                    class="project-page-Media-and-Accordion-wrapper project-page-Media-and-Accordion-wrapper_sorting"
-                  >
-                    <div
-                      class="project-page-media project-page-media_sorting"
-                    >
-                    </div>
-                    <img
-                      class="project-page-media project-page-media_sorting"
-                      src="/images/merge sort loop.jpg"
-                      alt="picture demonstrating an iteration through merge sort"
-                    />
-                  </div>
-                </div>
-                <div class="project-page_descriptionText">
-                  <ul>
-                    <li>
-                      <div class="accordion-wrapper accordion-wrapper_non-media">
-                        <input
-                          type="checkbox"
-                          class="accordion-checkbox"
-                          id="accordion-checkbox-roles-First3D"
-                          aria-label="toggle details"
-                          aria-checked="true"
-                          checked
-                        />
-
-                        <label
-                          class="accordion-checkbox-label"
-                          for="accordion-checkbox-roles-First3D"
-                        >
-                          <h4 class="accordion-header">First WASM Project</h4>
-                        </label>
-
-                        <p class="project-page-details-text accordion-text-wrapper project-page-article-p-full_complete">
-                          <span class="accordion-text-wrapper_marker"></span>
-                          This project was made twice. First, as a way to get into Rust/Bevy. Second, with wasm as a primary consideration, which I had thought at the start required no multi-threading (which I had in the first build).
-                        </p>
-                        <p class="project-page-details-text accordion-text-wrapper project-page-article-p-full_complete">
-                          <span class="accordion-text-wrapper_marker"></span>
-                          The first project taught me multi-threading (e.g., dealing with Arc's, Mutex's, locks, atomic types, threads, etc.). At most, the current rendition of the program only uses 
-                            <span class="external-link"
-                              ><a
-                                target="_blank"
-                                href="https://docs.rs/futures-channel/latest/futures_channel/mpsc/index.html"
-                                aria-label="Open mpsc rust/cargo docs"
-                                rel="external noopener"
-                                referrerpolicy="strict-origin-when-cross-origin"
-                              >
-                                <span class="in_text-link">MPSC channels</span>
-                                <svg
-                                  class="external-link-SVG"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  viewBox="0 0 28.7 21.7"
-                                >
-                                  <line
-                                    class="st0"
-                                    x1="14"
-                                    y1="12.7"
-                                    x2="22.4"
-                                    y2="4.4"
-                                  />
-                                  <polygon
-                                    class="st1"
-                                    points="23.1,8.8 24.9,1.9 18,3.8"
-                                  />
-                              <polyline
-                                class="st2"
-                                points="15.1,5.6 12.2,2.9 5.3,3 5.3,20.1 23.4,20.1 23.4,14.9 21.5,11.9 "
-                              />
-                            </svg> </a
-                        ></span>
-                        for loading in user-selected audio in web builds.
-                        </p>
-                        <p class="project-page-details-text accordion-text-wrapper project-page-article-p-full_complete">
-                          <span class="accordion-text-wrapper_marker"></span>
-                          The main difference: in the first version, multi-threading felt necessary since the sorting algorithms were done in loops, which of course blocked the main thread (e.g., could not rotate camera while sorting was running). The sorting algorithms were put in their own thread, which freed up interactivity for the rest of the program. I thought Web/Wasm targets do not allow multiple threads, and as such, the program was made again with incremental versions of the sorting algorithms, and then were called many times per frame depending on a modifiable frame budget variable (e.g., if frame budget was 4ms, sorting would increment as many times as it could in those 4ms) so nothing was blocked and everything could run on the web since multiple threads were not used.
-                        </p>
-                        <p class="project-page-details-text accordion-text-wrapper project-page-article-p-full_complete">
-                          <span class="accordion-text-wrapper_marker"></span>
-                          I now realize that wasm and modern web browsers can support multiple threads, and even though bevy (as of the time of writing this) is still
-                            <span class="external-link"
-                              ><a
-                                target="_blank"
-                                href="https://github.com/bevyengine/bevy/issues/4078"
-                                aria-label="Open bevy's github issue of multi-threaded support on the web"
-                                rel="external noopener"
-                                referrerpolicy="strict-origin-when-cross-origin"
-                              >
-                                <span class="in_text-link">experimenting with supporting it</span>
-                                <svg
-                                  class="external-link-SVG"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  viewBox="0 0 28.7 21.7"
-                                >
-                                  <line
-                                    class="st0"
-                                    x1="14"
-                                    y1="12.7"
-                                    x2="22.4"
-                                    y2="4.4"
-                                  />
-                                  <polygon
-                                    class="st1"
-                                    points="23.1,8.8 24.9,1.9 18,3.8"
-                                  />
-                              <polyline
-                                class="st2"
-                                points="15.1,5.6 12.2,2.9 5.3,3 5.3,20.1 23.4,20.1 23.4,14.9 21.5,11.9 "
-                              />
-                            </svg> </a
-                        ></span>
-                          , I believe that given all I've learned working on this, I could write this program a third time and have parallel sorting on both native and web builds.
-                        </p>
-                        <p class="project-page-details-text accordion-text-wrapper project-page-article-p-full_complete">
-                          <span class="accordion-text-wrapper_marker"></span>
-                          The experience gained from working on the first version made the second version far better and development ran smoother as I had already gained experience working with Rust/Bevy, and all I had to learn was wasm and rust-wasm bindings, which were relatively easier in comparison.
-                        </p>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="accordion-wrapper accordion-wrapper_non-media">
-                        <input
-                          type="checkbox"
-                          class="accordion-checkbox"
-                          id="accordion-checkbox-roles-Scope"
-                          aria-label="toggle details"
-                          aria-checked="true"
-                          checked
-                        />
-                        <label
-                          class="accordion-checkbox-label"
-                          for="accordion-checkbox-roles-Scope"
-                        >
-                        <h4 class="accordion-header">Swap-Based Merge Sort</h4>
-                        </label>
-
-                        <p class="project-page-details-text accordion-text-wrapper project-page-article-p-full_complete">
-                          <span class="accordion-text-wrapper_marker"></span>
-                          This program currently only visualizes swap-based algorithms as they are the easiest to visualize. Traditionally, merge sort is not swap-based, but it can be made to be swap-based as detailed below. I essentially made this up myself and if there are online resources that describe this same method, I did not utilize them at all. Of course the
-                            <span class="external-link"
-                              ><a
-                                target="_blank"
-                                href="https://github.com/ArshvirGoraya/3D-Sorting-Visualizer/blob/main/src/sorter/merge_sort.rs"
-                                aria-label="Open source code of implemented merge sort algorithm on github"
-                                rel="external noopener"
-                                referrerpolicy="strict-origin-when-cross-origin"
-                              >
-                                <span class="in_text-link">source code</span>
-                                <svg
-                                  class="external-link-SVG"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  viewBox="0 0 28.7 21.7"
-                                >
-                                  <line
-                                    class="st0"
-                                    x1="14"
-                                    y1="12.7"
-                                    x2="22.4"
-                                    y2="4.4"
-                                  />
-                                  <polygon
-                                    class="st1"
-                                    points="23.1,8.8 24.9,1.9 18,3.8"
-                                  />
-                              <polyline
-                                class="st2"
-                                points="15.1,5.6 12.2,2.9 5.3,3 5.3,20.1 23.4,20.1 23.4,14.9 21.5,11.9 "
-                              />
-                            </svg> </a
-                        ></span>
-                          is available but this gives a rough overview of how it is done.
-                        </p>
-                        <p class="project-page-details-text accordion-text-wrapper project-page-article-p-full_complete">
-                          <span class="accordion-text-wrapper_marker"></span>
-                          Fundamentally, merge sort builds a "K" array by comparing elements between 2 split arrays and simply iterating through them until all the elements are placed inside the "K" array in order. At first, the 2 arrays are just the size of 1, so the "K" array being built is of size 2. Then the 2 arrays have the size of 2, and so the size of "K" array is 4, and so on until "K" is the size of the entire input list, which will, at that point, be an ordered/sorted list. For a more detailed explanation, consider a more 
-                            <span class="external-link"
-                              ><a
-                                target="_blank"
-                                href="https://www.youtube.com/watch?v=IN_ZOU-LK08"
-                                aria-label="link to youtube video going over merge sort"
-                                rel="external noopener"
-                                referrerpolicy="strict-origin-when-cross-origin"
-                              >
-                                <span class="in_text-link">focussed overview</span>
-                                <svg
-                                  class="external-link-SVG"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  viewBox="0 0 28.7 21.7"
-                                >
-                                  <line
-                                    class="st0"
-                                    x1="14"
-                                    y1="12.7"
-                                    x2="22.4"
-                                    y2="4.4"
-                                  />
-                                  <polygon
-                                    class="st1"
-                                    points="23.1,8.8 24.9,1.9 18,3.8"
-                                  />
-                              <polyline
-                                class="st2"
-                                points="15.1,5.6 12.2,2.9 5.3,3 5.3,20.1 23.4,20.1 23.4,14.9 21.5,11.9 "
-                              />
-                            </svg> </a
-                        ></span>
-                          of the subject matter.
-                        </p>
-                        <p class="project-page-details-text accordion-text-wrapper project-page-article-p-full_complete">
-                          <span class="accordion-text-wrapper_marker"></span>
-                          The way this program makes merge sort be swap-based is by tracking where elements of the "left" array go after being swapped. For example, imagine that the input is currently "2, 5, 6, 10, 1, 3, 4, 7, 8, 9", the 2 arrays are of size 4, and the "K" array needs to be of size 8 before the next loop around, but starts at 0. Elements 0-3 are in Left Array ("2, 5, 6, 10") and elements 4-8 are in Right Array ("1, 3, 4, 7"). We begin comparing element-by-element: "2" from Left Array is bigger than "1" from Right Array, so it gets swapped with the element at "K" index, currently at "2". Now the input looks like this: "1, 5, 6, 10, 2, 3, 4, 7, 8, 9." For the next comparison, K increments to a 1, Right Array increments to point to its next element "3". Since Left Array must still point to "2" for future comparisons, it updates where it is pointing to. It does so by putting its element's new position/index into a queue, or a 
-                            <span class="external-link"
-                              ><a
-                                target="_blank"
-                                href="https://doc.rust-lang.org/std/collections/struct.VecDeque.html"
-                                aria-label="link to rust documentation of VecDeque"
-                                rel="external noopener"
-                                referrerpolicy="strict-origin-when-cross-origin"
-                              >
-                                <span class="in_text-link">VecDeque</span>
-                                <svg
-                                  class="external-link-SVG"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  viewBox="0 0 28.7 21.7"
-                                >
-                                  <line
-                                    class="st0"
-                                    x1="14"
-                                    y1="12.7"
-                                    x2="22.4"
-                                    y2="4.4"
-                                  />
-                                  <polygon
-                                    class="st1"
-                                    points="23.1,8.8 24.9,1.9 18,3.8"
-                                  />
-                              <polyline
-                                class="st2"
-                                points="15.1,5.6 12.2,2.9 5.3,3 5.3,20.1 23.4,20.1 23.4,14.9 21.5,11.9 "
-                              />
-                            </svg> </a
-                        ></span>
-                          in Rust. This is the gist of it, whenever Right Array swaps with a element in the Left Array, it simply adds that element's new index into the queue to track it for later comparisons. They are removed from the queue when they are smaller in a comparison and swap places with wherever the "K" index is at that comparison. There is only one more important aspect to be aware of.
-                        </p>
-                        <p class="project-page-details-text accordion-text-wrapper project-page-article-p-full_complete">
-                          <span class="accordion-text-wrapper_marker"></span>
-                          There are cases where an element's position in the queue has to be updated. For example, say that the input is currently "1, 2, 3, 4, 5, 6, 10, 7, 8, 9", K is currently at a 6, Left Array is pointing at "10" (which is at the 6th index) and Right Array is pointing at "7". "7" is smaller than "10", so we swap. Right Array increments, and importantly, because the position of the element in Left Array's queue has changed ("10" was at 6, but now is at 7), we update the element in the queue to point to its new location. At the end, the input looks like this: "1, 2, 3, 4, 5, 6, 7, 10, 8, 9." With Left Array still pointing at 10. So, ultimately, Left Array simply uses a queue to keep track of where its next elements go for future comparisons and updates their positions if required. With this, you can do merge sort with only swaps.
-                        </p>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </section> -->
-
-
-
-            <!-- <section class="project-page-article-section Scroll_to">
-              <h2 id="Details">Details</h2>
-              <hr />
-              <div class="project-page_description-and-video-wrapper project-page_description-and-video-wrapper_BiggestChallenge">
-                <div class="project-page_descriptionText">
-                  <p>
-                    UI: the ui framework used is Egui, specifically bevy-egui, which has a lot of features that are shown directly in the app: text edits, color pickers, checkboxes, buttons, sliders, floating windows, etc. It uses a builder pattern, which allows chaining methods on ui elements to build them which is a treat to work with. At the time of writing this, it is the most feature rich UI solution in Rust. My only gripe is, it is not retained mode. It is immediate mode, which means it creates all the ui elements every frame. I assumed this would impact performance, but it actually had very little impact on the program.
-                  </p>
-                </div>
-              </div>
-            </section> -->
 
             <section class="project-page-article-section Scroll_to">
               <h2 id="Download">Download</h2>

@@ -2502,14 +2502,6 @@ body {
   /* background-color: red; */
   margin-top: 3ch
 }
-/* .project-page-media_sorting{
-  background-image: url("images/merge sort loop.jpg") !important;
-  width: 100% !important;
-  min-width: 20ch !important;
-  height: 100%;
-  min-height: 90ch;
-  background-color: red;
-} */
 .project-page-showcase-image-sorting {
   height: 100%;
   background-repeat: no-repeat;
@@ -2612,10 +2604,6 @@ body {
   float: right;
   width: 65%;
 }
-/* .project-page-Media-and-Accordion-wrapper-float_sorting {
-  float: right;
-  width: initial ;
-} */
 
 .project-page_description-and-video-wrapper-capabilities {
   display: initial;
@@ -2926,11 +2914,12 @@ body {
 }
 
 .requirementList {
+  align-self: center;
+  /* align-content: center; */
+  justify-self: center;
   white-space: nowrap;
   margin-left: 4ch;
-
   min-width: 20ch;
-  /* text-indent: 4ch; */
 }
 .requirementList li {
   margin-left: 2ch;
