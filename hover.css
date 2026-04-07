@@ -52,6 +52,14 @@
 }
 
 @media (hover: hover) {
+  .fullscreen_btn:hover,
+  .fullscreen_btn:focus-visible{
+    opacity: 1 !important;
+  }
+}
+
+
+@media (hover: hover) {
   .footer__email-link:hover,
   .footer__email-link:focus-visible {
     background-color: var(--email-button-hover);

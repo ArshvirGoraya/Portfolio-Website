@@ -270,3 +270,32 @@ AccordionCheckboxs.forEach((AccordionCheckbox) =>{
         // addClickStyle(document.querySelector(".class_name"), "JS-Touch") //toggles style
 
 // if ((window.matchMedia( "(hover: none)" ).matches) || onSamsungChrome()) {}
+
+const full_screen_button = document.getElementById("fullscreen_btn");
+if (full_screen_button != null){
+    full_screen_button.addEventListener("touchstart", addTouchStyle);
+    full_screen_button.addEventListener("touchend", removeTouchStyle);
+    full_screen_button.addEventListener("touchcancel", removeTouchStyle);
+    function addTouchStyle(e){
+        e.target.parentElement.classList.add("fullscreen_btn-touch");
+    }
+    function removeTouchStyle(e){
+        e.target.parentElement.classList.remove("fullscreen_btn-touch");
+    }
+    //
+    full_screen_button.onclick = () =>{
+        let iframe = document.getElementById("iframe-demo");
+        enterFullscreen(iframe);
+    }
+}
+async function enterFullscreen(iframe){
+    // iframe.requestFullscreen({navigationUI: "show"});
+
+    // must await before landscape mode or will not set to landscape on some devices.
+    iframe.requestFullscreen().then(_ => {
+        // will throw error on devices without orientation.lock, so catch
+        screen.orientation.lock("landscape").catch(err => {
+            console.warn("could not set to landscape: ", err);
+        })
+    });
+}

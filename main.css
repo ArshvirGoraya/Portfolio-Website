@@ -2460,30 +2460,86 @@ body {
   padding-right: 1ch;
 }
 
+.demo-section{
+  height: 100%;
+  margin-bottom: 20em;
+  padding-bottom: 3em;
+}
+.iframe-demo{
+  width: 100%;
+  height: 100%;
+  border-radius: 1ch; 
+  border: none;
+}
+
+.fullscreen_btn{
+  width: 3.5ch;
+  height: 3.5ch;
+  position: relative;
+  left: calc(100% - 4.5ch);
+  bottom: 5ch;
+  cursor: pointer;
+  mix-blend-mode: overlay;
+  border-color: transparent;
+  border-radius: 0.5ch;
+  transition-property: opacity;
+  transition-duration: 0.5s;
+  opacity: 0.4;
+  outline-width: 1px black;
+}
+.fullscreen_btn svg{
+  scale: 0.7;
+}
+.fullscreen_btn-touch{
+  opacity: 1;
+}
+
 .project-page-showcase-image {
   grid-column: span 1;
   grid-row: span 2 !important;
+  display: flex;
+  flex-direction: column;
   /* background-color: red; */
-
-  background-image: url("images/PlatinumDriver_Unity.jpg");
-  background-repeat: no-repeat;
-  background-size: auto;
-
-  background-position: -130ch -30ch;
-
-  margin-top: 3ch;
-
-  filter: hue-rotate(5deg);
+  margin-top: 3ch
 }
+/* .project-page-media_sorting{
+  background-image: url("images/merge sort loop.jpg") !important;
+  width: 100% !important;
+  min-width: 20ch !important;
+  height: 100%;
+  min-height: 90ch;
+  background-color: red;
+} */
+.project-page-showcase-image-sorting {
+  height: 100%;
+  background-repeat: no-repeat;
+  background-image: url("images/sorting\ WIP.jpg");
+  mix-blend-mode: difference;
+  background-position: -60ch;
+  background-size: auto 150ch;
+
+}
+.project-page-showcase-image-sorting_2 {
+  height: 100%;
+  background-repeat: no-repeat;
+  background-image: url("images/merge sort loop.jpg");
+  mix-blend-mode: difference;
+  background-position: -6ch;
+  background-size: auto 150ch;
+}
+.project-page-showcase-image-platinum {
+  background-image: url("images/PlatinumDriver_Unity.jpg");
+  background-position: -130ch -30ch;
+}
+
 .project-page-showcase-image-fallingIslands {
   background-image: url("images/FallingIslands_Godot.jpg");
-
   background-position: -90ch -13ch;
 }
 
+
 .project-page-showcase-image-SuperBlueBall {
   background-image: url("images/Super Blue Ball_Unity.jpg");
-
   background-position: -90ch -20ch;
 }
 
@@ -2498,6 +2554,9 @@ body {
 }
 .project-page-article-p-full{
   max-width: 110ch !important;
+}
+.project-page-article-p-full_sort{
+  max-width: 86ch !important;
 }
 
 .empty-column {
@@ -2553,6 +2612,10 @@ body {
   float: right;
   width: 65%;
 }
+/* .project-page-Media-and-Accordion-wrapper-float_sorting {
+  float: right;
+  width: initial ;
+} */
 
 .project-page_description-and-video-wrapper-capabilities {
   display: initial;
@@ -2633,6 +2696,11 @@ body {
   transition: transform 0.5s;
 }
 
+.project-page-details-text_bullet::before{
+  content: ">";
+  color: var(--game-circle-color-default);
+}
+
 .project-page-details-text {
   text-indent: 0 !important;
 
@@ -2645,9 +2713,11 @@ body {
 
   max-height: 0;
 
+  margin: 0 !important;
+
   padding-left: 4ch;
 
-  padding-bottom: 1ch;
+  /* padding-bottom: 1ch; */
 
   opacity: 0;
 
@@ -2670,7 +2740,7 @@ body {
   transition-duration: 1s;
 
   top: 0.5ch;
-  height: calc(100% - 2ch);
+  height: calc(100% - 1ch);
 }
 .accordion-checkbox:checked ~ .accordion-text-wrapper {
   /*IMPORTANT: THE SPEED OF THE TRANSITION ANIMATION IS LINKED TO THIS MAX-HEIGHT NUMBER!*/

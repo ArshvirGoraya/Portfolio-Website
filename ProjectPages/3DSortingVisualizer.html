@@ -1,0 +1,1364 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Arshvir - 3D Sorting Visualizer</title>
+    <meta name="author" content="Arshvir Goraya" />
+    <meta
+      name="description"
+      content="Arshvir Goraya's portfolio. 3D Sorting Visualizer"
+    />
+    <meta
+      name="keywords"
+      content="Arshvir, Goraya, portfolio, game, developer, programmer, gamedev, indie, video game, 3D Sorting Visualizer"
+    />
+
+    <link rel="stylesheet" type="text/css" href="/main.css" />
+    <link rel="stylesheet" type="text/css" href="/hover.css" />
+
+    <link rel="icon" href="/favicon.ico" />
+
+    <!-- <script defer src="main.js"></script> -->
+    <script src="/colorMode.js"></script>
+    <script defer src="/main.js"></script>
+    <script defer src="/ProjectPageJS.js"></script>
+
+    <script
+      defer
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.0/dist/email.min.js"
+    ></script>
+
+    <script defer src="/autoEmail.js"></script>
+  </head>
+  <body onload="SetColorLogo()">
+    <div class="main-wrapper">
+      <!--  -->
+      <!--  -->
+      <!--  -->
+      <!--  -->
+      <!--  -->
+      <nav class="navbar">
+        <ul class="navbar__parent-container">
+          <div class="navbar__home-container">
+            <li>
+              <a
+                class="navbar__item navbar__home name"
+                href="/index.html"
+                aria-label="Go to home page"
+                target="_self"
+                rel="noopener prev"
+                referrerpolicy="strict-origin-when-cross-origin"
+                ><span class="fn">ARSHVIR</span>
+                <span class="ln">GORAYA</span>
+              </a>
+            </li>
+            <div class="navbar__vertical-name-seperator navbar__item"></div>
+          </div>
+          <div class="navbar__collapsible-container">
+            <div class="navbar__items-container">
+              <!--contains contact and resume-->
+              <li>
+                <a
+                  class="navbar__item bbottom contact"
+                  href="mailto:ArshvirGoraya@outlook.com"
+                  aria-label="E-mail"
+                  rel="noopener"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  >CONTACT</a
+                >
+              </li>
+              <li>
+                <a
+                  class="navbar__item bbottom resume PDF_link"
+                  target="_blank"
+                  href="/PDFs\ArshvirGoraya_Resume.pdf"
+                  rel="noopener"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  aria-label="Résumé"
+                  data-PDF_alt="PDFs\PDF_Resume.html"
+                  >RÉSUMÉ</a
+                >
+              </li>
+            </div>
+
+            <div class="navbar__vertical-seperator navbar__item"></div>
+
+            <div class="navbar__links-container">
+              <li>
+                <a
+                  class="navbar__item navbar__icon github"
+                  href="https://github.com/ArshvirGoraya"
+                  aria-label="Go to my Github page"
+                  target="_blank"
+                  rel="external noopener"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                >
+                  <svg viewBox="0 0 32.6 31.8">
+                    <path
+                      d="M16.3,0C7.3,0,0,7.3,0,16.3c0,7.2,4.7,13.3,11.1,15.5c0.8,0.1,1.1-0.4,1.1-0.8s0-1.4,0-2.8
+                         c-4.5,1-5.5-2.2-5.5-2.2c-0.7-1.9-1.8-2.4-1.8-2.4c-1.5-1,0.1-1,0.1-1c1.6,0.1,2.5,1.7,2.5,1.7c1.5,2.5,3.8,1.8,4.7,1.4
+                         c0.1-1.1,0.6-1.8,1-2.2c-3.6-0.4-7.4-1.8-7.4-8.1c0-1.8,0.6-3.2,1.7-4.4c-0.1-0.3-0.7-2,0.2-4.2c0,0,1.4-0.4,4.5,1.7
+                         C13.5,8.1,14.9,8,16.3,8s2.8,0.2,4.1,0.5c3.1-2.1,4.5-1.7,4.5-1.7c0.9,2.2,0.3,3.9,0.2,4.3c1,1.1,1.7,2.6,1.7,4.4
+                         c0,6.3-3.8,7.6-7.4,8c0.6,0.5,1.1,1.5,1.1,3c0,2.2,0,3.9,0,4.5c0,0.4,0.3,0.9,1.1,0.8c6.5-2.2,11.1-8.3,11.1-15.5
+                         C32.6,7.3,25.3,0,16.3,0z"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a
+                  class="navbar__item navbar__icon linkedin"
+                  href="https://www.linkedin.com/in/arshvir-goraya-1b2739266/"
+                  aria-label="Go to my linked in page"
+                  target="_blank"
+                  rel="external noopener"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                >
+                  <svg viewBox="0 0 54 54">
+                    <path
+                      d="M48.1,12.9v26.8c0,2.2-0.8,4.1-2.4,5.7c-1.6,1.6-3.5,2.4-5.7,2.4H13.3c-2.2,0-4.1-0.8-5.7-2.4c-1.6-1.6-2.4-3.5-2.4-5.7   V12.9c0-2.2,0.8-4.1,2.4-5.7c1.6-1.6,3.5-2.4,5.7-2.4H40c2.2,0,4.1,0.8,5.7,2.4C47.3,8.8,48.1,10.7,48.1,12.9z M18.7,15.4   c0-1-0.4-1.8-1-2.4C17,12.3,16.2,12,15.1,12c-1.1,0-2,0.3-2.6,0.9c-0.7,0.6-1,1.4-1,2.4c0,0.9,0.3,1.7,1,2.4c0.7,0.6,1.5,1,2.6,1h0   c1.1,0,2-0.3,2.7-1C18.4,17.1,18.7,16.3,18.7,15.4z M11.8,40.7h6.4V21.3h-6.4V40.7z M35,40.7h6.4V29.6c0-2.9-0.7-5-2-6.5   c-1.4-1.5-3.2-2.2-5.4-2.2c-2.5,0-4.5,1.1-5.8,3.3h0.1v-2.8h-6.4c0.1,1.2,0.1,7.7,0,19.4h6.4V29.9c0-0.7,0.1-1.2,0.2-1.6   c0.3-0.7,0.7-1.2,1.3-1.7c0.6-0.5,1.2-0.7,2.1-0.7c2.2,0,3.2,1.5,3.2,4.4V40.7z"
+                    />
+                  </svg>
+                </a>
+              </li>
+
+              <li>
+                <a
+                  class="navbar__item navbar__icon linktree"
+                  href="https://linktr.ee/arshvirgoraya"
+                  aria-label="Go to my link tree page"
+                  target="_blank"
+                  rel="external noopener"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  >LINKTREE
+                </a>
+              </li>
+            </div>
+          </div>
+          <div class="navbar__mode-container">
+            <!--contains color mode and mobile mode icons-->
+            <li>
+              <button
+                aria-label="toggle light/dark mode"
+                class="navbar__item navbar__color-mode-button"
+                onclick="toggleColorMode()"
+              >
+                <svg viewBox="0 0 35.1 36.9" class="navbar__icon sun">
+                  <polygon
+                    class="st0 sun-outerCircle"
+                    points="17.6,0 20.4,9.7 28.4,3.5 25,13 35.1,12.8 26.8,18.5 35.1,24.1 25,23.9 28.4,33.4 20.4,27.2 17.6,36.9 
+                           14.7,27.2 6.7,33.4 10.1,23.9 0,24.1 8.3,18.5 0,12.8 10.1,13 6.7,3.5 14.7,9.7 "
+                  />
+                  <circle
+                    class="st1 sun-innerCircle"
+                    cx="17.6"
+                    cy="18.5"
+                    r="7.4"
+                  />
+                </svg>
+
+                <svg viewBox="0 0 35.1 36.9" class="navbar__icon moon">
+                  <path
+                    id="moonPath"
+                    d="M17.5,1.1c-0.7,0-1.3,0-2,0.1c4.1,1.6,6.9,5.6,6.9,10.2c0,6.1-4.9,11-11,11c-5.2,0-9.6-3.7-10.7-8.5
+                     c-0.4,1.5-0.6,3-0.6,4.6C0.2,28,8,35.8,17.5,35.8S34.9,28,34.9,18.4S27.1,1.1,17.5,1.1z"
+                  />
+                </svg>
+              </button>
+            </li>
+            <li>
+              <button
+                aria-label="toggle navigation menu"
+                class="navbar__item navbar__burger-button"
+              >
+                <svg viewBox="0 0 28.7 21.7" class="navbar__icon burger">
+                  <g>
+                    <path
+                      class="st0"
+                      d="M0.8,3.2C0.6,3.2,0.4,3,0.4,2.8V0.8c0-0.3,0.2-0.5,0.5-0.5h27c0.3,0,0.5,0.2,0.5,0.5v1.9
+                  c0,0.3-0.2,0.5-0.5,0.5H0.8z"
+                    />
+                    <path
+                      d="M27.9,0.8C27.9,0.8,28,0.8,27.9,0.8l0.1,2c0,0,0,0.1-0.1,0.1h-27c0,0-0.1,0-0.1-0.1V0.8c0,0,0-0.1,0.1-0.1H27.9 M27.9,0
+                  h-27C0.4,0,0,0.4,0,0.8v1.9c0,0.5,0.4,0.8,0.8,0.8h27c0.5,0,0.8-0.4,0.8-0.8V0.8C28.7,0.4,28.3,0,27.9,0L27.9,0z"
+                    />
+                  </g>
+                  <g>
+                    <path
+                      class="st0"
+                      d="M0.8,12.3c-0.3,0-0.5-0.2-0.5-0.5V9.9c0-0.3,0.2-0.5,0.5-0.5h27c0.3,0,0.5,0.2,0.5,0.5v1.9
+                  c0,0.3-0.2,0.5-0.5,0.5H0.8z"
+                    />
+                    <path
+                      d="M27.9,9.8C27.9,9.8,28,9.8,27.9,9.8l0.1,2c0,0,0,0.1-0.1,0.1h-27c0,0-0.1,0-0.1-0.1V9.9c0,0,0-0.1,0.1-0.1H27.9 M27.9,9.1
+                  h-27C0.4,9.1,0,9.4,0,9.9v1.9c0,0.5,0.4,0.8,0.8,0.8h27c0.5,0,0.8-0.4,0.8-0.8V9.9C28.7,9.4,28.3,9.1,27.9,9.1L27.9,9.1z"
+                    />
+                  </g>
+                  <g>
+                    <path
+                      class="st0"
+                      d="M0.8,21.3c-0.3,0-0.5-0.2-0.5-0.5V19c0-0.3,0.2-0.5,0.5-0.5h27c0.3,0,0.5,0.2,0.5,0.5v1.9
+                  c0,0.3-0.2,0.5-0.5,0.5H0.8z"
+                    />
+                    <path
+                      d="M27.9,18.9C27.9,18.9,28,18.9,27.9,18.9l0.1,2c0,0,0,0.1-0.1,0.1h-27c0,0-0.1,0-0.1-0.1V19c0,0,0-0.1,0.1-0.1H27.9
+                   M27.9,18.1h-27C0.4,18.1,0,18.5,0,19v1.9c0,0.5,0.4,0.8,0.8,0.8h27c0.5,0,0.8-0.4,0.8-0.8V19C28.7,18.5,28.3,18.1,27.9,18.1
+                  L27.9,18.1z"
+                    />
+                  </g>
+                </svg>
+              </button>
+            </li>
+          </div>
+          <div
+            class="navbar__mob-collapsible-container js-navbar__collapsible-container"
+          >
+            <div class="navbar__mob-items-container">
+              <li>
+                <a
+                  class="navbar__item bbottom mob-contact"
+                  href="mailto:ArshvirGoraya@outlook.com"
+                  aria-label="E-mail"
+                  rel="noopener"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  >CONTACT</a
+                >
+              </li>
+              <li>
+                <a
+                  class="navbar__item bbottom mob-resume PDF_link"
+                  target="_blank"
+                  href="/PDFs\ArshvirGoraya_Resume.pdf"
+                  rel="noopener"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  aria-label="Résumé"
+                  data-PDF_alt="PDFs\PDF_Resume.html"
+                  >RÉSUMÉ</a
+                >
+              </li>
+            </div>
+
+            <div class="navbar__mob-vertical-seperator navbar__item"></div>
+
+            <div class="navbar__mob-links-container">
+              <li>
+                <a
+                  class="navbar__item navbar__icon mob-github js-navbab__itch-github-raise"
+                  href="https://github.com/ArshvirGoraya"
+                  aria-label="Go to my Github page"
+                  target="_blank"
+                  rel="external noopener"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                >
+                  <svg viewBox="0 0 32.6 31.8">
+                    <path
+                      d="M16.3,0C7.3,0,0,7.3,0,16.3c0,7.2,4.7,13.3,11.1,15.5c0.8,0.1,1.1-0.4,1.1-0.8s0-1.4,0-2.8
+                         c-4.5,1-5.5-2.2-5.5-2.2c-0.7-1.9-1.8-2.4-1.8-2.4c-1.5-1,0.1-1,0.1-1c1.6,0.1,2.5,1.7,2.5,1.7c1.5,2.5,3.8,1.8,4.7,1.4
+                         c0.1-1.1,0.6-1.8,1-2.2c-3.6-0.4-7.4-1.8-7.4-8.1c0-1.8,0.6-3.2,1.7-4.4c-0.1-0.3-0.7-2,0.2-4.2c0,0,1.4-0.4,4.5,1.7
+                         C13.5,8.1,14.9,8,16.3,8s2.8,0.2,4.1,0.5c3.1-2.1,4.5-1.7,4.5-1.7c0.9,2.2,0.3,3.9,0.2,4.3c1,1.1,1.7,2.6,1.7,4.4
+                         c0,6.3-3.8,7.6-7.4,8c0.6,0.5,1.1,1.5,1.1,3c0,2.2,0,3.9,0,4.5c0,0.4,0.3,0.9,1.1,0.8c6.5-2.2,11.1-8.3,11.1-15.5
+                         C32.6,7.3,25.3,0,16.3,0z"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a
+                  class="navbar__item navbar__icon mob-linkedin js-navbab__itch-github-raise"
+                  href="https://www.linkedin.com/in/arshvir-goraya-1b2739266/"
+                  aria-label="Go to my linked in page"
+                  target="_blank"
+                  rel="external noopener"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                >
+                  <svg viewBox="0 0 54 54">
+                    <path
+                      d="M48.1,12.9v26.8c0,2.2-0.8,4.1-2.4,5.7c-1.6,1.6-3.5,2.4-5.7,2.4H13.3c-2.2,0-4.1-0.8-5.7-2.4c-1.6-1.6-2.4-3.5-2.4-5.7   V12.9c0-2.2,0.8-4.1,2.4-5.7c1.6-1.6,3.5-2.4,5.7-2.4H40c2.2,0,4.1,0.8,5.7,2.4C47.3,8.8,48.1,10.7,48.1,12.9z M18.7,15.4   c0-1-0.4-1.8-1-2.4C17,12.3,16.2,12,15.1,12c-1.1,0-2,0.3-2.6,0.9c-0.7,0.6-1,1.4-1,2.4c0,0.9,0.3,1.7,1,2.4c0.7,0.6,1.5,1,2.6,1h0   c1.1,0,2-0.3,2.7-1C18.4,17.1,18.7,16.3,18.7,15.4z M11.8,40.7h6.4V21.3h-6.4V40.7z M35,40.7h6.4V29.6c0-2.9-0.7-5-2-6.5   c-1.4-1.5-3.2-2.2-5.4-2.2c-2.5,0-4.5,1.1-5.8,3.3h0.1v-2.8h-6.4c0.1,1.2,0.1,7.7,0,19.4h6.4V29.9c0-0.7,0.1-1.2,0.2-1.6   c0.3-0.7,0.7-1.2,1.3-1.7c0.6-0.5,1.2-0.7,2.1-0.7c2.2,0,3.2,1.5,3.2,4.4V40.7z"
+                    />
+                  </svg>
+                </a>
+              </li>
+            </div>
+            <li>
+              <a
+                class="navbar__item mob-linktree"
+                href="https://linktr.ee/arshvirgoraya"
+                aria-label="Go to my link tree page"
+                target="_blank"
+                rel="external noopener"
+                referrerpolicy="strict-origin-when-cross-origin"
+                >LINKTREE
+              </a>
+            </li>
+          </div>
+        </ul>
+      </nav>
+
+      <!--  -->
+      <!--  -->
+      <!--  -->
+      <!--  -->
+      <!--  -->
+
+      <div class="project-page-main-content">
+        <div class="project-page-cover-wrapper">
+          <header>3D Sorting Visualizer</header>
+          <img
+            class="project-page-cover-image project-page-cover-image-Sorting"
+            src="..\images\Sorting Header.jpg"
+            alt="Cover image of 3D Sorting Visualizer"
+          />
+        </div>
+
+        <section class="project-page-main-section">
+          <nav class="project-page-nav">
+            <h3>Article Sections</h3>
+            <hr />
+            <div class="project-page-articleNav-texts-Superwrapper">
+              <div class="scroll-progress-wrapper"></div>
+
+              <div class="project-page-articleNav-text-wrapper project-page-articleNav-text-wrapper_demo">
+                <div class="project-page-articleNav-marker"></div>
+                <a
+                  id="Demo-link"
+                  class="project-page-nav-link"
+                  href="#Demo"
+                  aria-label="jump to demo section"
+                  rel="noopener"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  >Demo</a
+                >
+              </div>
+
+              <div class="project-page-articleNav-text-wrapper">
+                <div class="project-page-articleNav-marker"></div>
+                <a
+                  id="Description-link"
+                  class="project-page-nav-link"
+                  href="#Description"
+                  aria-label="jump to description section"
+                  rel="noopener"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  >Description</a
+                >
+              </div>
+
+              <div class="project-page-articleNav-text-wrapper">
+                <div class="project-page-articleNav-marker"></div>
+                <a
+                  id="Reason_Created-link"
+                  class="project-page-nav-link"
+                  href="#Reason_Created"
+                  aria-label="jump to Why Was This Created section"
+                  rel="noopener"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  >Why Was This Created</a
+                >
+              </div>
+              <div class="project-page-articleNav-text-wrapper">
+                <div class="project-page-articleNav-marker"></div>
+                <a
+                  id="Roles-link"
+                  class="project-page-nav-link"
+                  href="#Learn"
+                  aria-label="jump to What I Learned section"
+                  rel="noopener"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                >
+                  What I Learned</a
+                >
+              </div>
+              <!-- <div class="project-page-articleNav-text-wrapper">
+                <div class="project-page-articleNav-marker"></div>
+                <a
+                  id="Challenge-link"
+                  class="project-page-nav-link"
+                  href="#Details"
+                  aria-label="jump to Details section"
+                  rel="noopener"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  >Details</a
+                >
+              </div> -->
+              <div class="project-page-articleNav-text-wrapper">
+                <div class="project-page-articleNav-marker"></div>
+                <a
+                  id="Download-link"
+                  class="project-page-nav-link"
+                  href="#Download"
+                  aria-label="jump to download section"
+                  rel="noopener"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  >Download</a
+                >
+              </div>
+            </div>
+          </nav>
+
+          <article class="project-page-article">
+            <!-- TODO: uncomment this -->
+            <!-- <section class="project-page-article-section Scroll_to demo-section">
+              <h2 id="Demo">Demo</h2>
+              <hr />
+               <iframe id="iframe-demo" class="iframe-demo" allowfullscreen src="https://arshvirgoraya.github.io/3D-Sorting-Visualizer" title="Rust-Bevy 3D Sorting Visualizer Demo">
+                [Your browser does not support the html iframe tag :(]
+               </iframe> 
+                <button id="fullscreen_btn" class="fullscreen_btn" aria-label="Enter Fullscreen">
+                  <svg viewBox="0 0 32 32">
+                    <polyline points="4,8 4,12 0,12 0,0 12,0 12,4 8,4 12,8 12,12 8,12 4,8 "/>
+                    <polyline points="20,8 24,4 20,4 20,0 32,0 32,12 28,12 28,8 24,12 20,12 20,8 "/>
+                    <polyline points="0,20 4,20 4,24 8,20 12,20 12,24 8,28 12,28 12,32 0,32 0,20 "/>
+                    <polyline points="20,20 24,20 28,24 28,20 32,20 32,32 20,32 20,28 24,28 20,24 20,20 "/>
+                  </svg>
+                </button>
+            </section> -->
+
+            <section class="project-page-article-section Scroll_to">
+              <h2 id="Description">Description</h2>
+              <hr />
+              <div
+                class="project-page_description-and-video-wrapper project-page_description-and-video-wrapper_Description"
+              >
+                <div class="project-page-Media-and-Accordion-wrapper-float">
+                  <div
+                    class="project-page-Media-and-Accordion-wrapper"
+                  >
+                    <video
+                      muted
+                      class="project-page-media"
+                      controls
+                      preload="auto"
+                      src="/videos\Sort Visualizer 3D Preview.mp4#t=0.1"
+                      playsinline
+                    >
+                      [Your browser does not support the html video tag :(]
+                    </video>
+                    <div class="accordion-wrapper-left-margin">
+                      <p class="project-page-details-text project-page-details-text_bullet">
+                        Watch longer video on 
+                        <span class="external-link"
+                          ><a
+                            target="_blank"
+                            href="https://youtu.be/0J2m1vfnT3"
+                            aria-label="Open youtube link"
+                            rel="external noopener"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                          >
+                            <span class="in_text-link">Youtube</span>
+                            <svg
+                              class="external-link-SVG"
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 28.7 21.7"
+                            >
+                              <line
+                                class="st0"
+                                x1="14"
+                                y1="12.7"
+                                x2="22.4"
+                                y2="4.4"
+                              />
+                              <polygon
+                                class="st1"
+                                points="23.1,8.8 24.9,1.9 18,3.8"
+                              />
+                          <polyline
+                            class="st2"
+                            points="15.1,5.6 12.2,2.9 5.3,3 5.3,20.1 23.4,20.1 23.4,14.9 21.5,11.9 "
+                          />
+                        </svg> </a
+                    ></span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="description-left-wrapper">
+                <p>
+                 Generate random values, or insert your own, select a sorting algorithm and let this program visualize the sorting in a 3D environment.
+                </p>
+                <p>
+                  Inspired by
+                    <span class="external-link"
+                      ><a
+                        target="_blank"
+                        href="https://youtu.be/kPRA0W1kECg"
+                        aria-label="Open PDF"
+                        rel="external noopener"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                      >
+                        <span class="in_text-link">Sound Of Sorting</span>
+                        <svg
+                          class="external-link-SVG"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 28.7 21.7"
+                        >
+                          <line
+                            class="st0"
+                            x1="14"
+                            y1="12.7"
+                            x2="22.4"
+                            y2="4.4"
+                          />
+                          <polygon
+                            class="st1"
+                            points="23.1,8.8 24.9,1.9 18,3.8"
+                          />
+                      <polyline
+                        class="st2"
+                        points="15.1,5.6 12.2,2.9 5.3,3 5.3,20.1 23.4,20.1 23.4,14.9 21.5,11.9 "
+                      />
+                    </svg> </a
+                ></span>
+                , this project also includes "adubilization" of the sorting algorithms.
+                </p>
+
+                <div class="accordion-wrapper accordion-wrapper_non-media">
+                  <input
+                    type="checkbox"
+                    class="accordion-checkbox"
+                    id="accordion-checkbox-ProjectDetails"
+                    aria-label="toggle details"
+                    aria-checked="true"
+                    checked
+                  />
+
+                  <label
+                    class="accordion-checkbox-label"
+                    for="accordion-checkbox-ProjectDetails"
+                  >
+                    <h4 class="accordion-header">Project Details</h4>
+                  </label>
+
+                  <p class="project-page-details-text accordion-text-wrapper">
+                    <span class="accordion-text-wrapper_marker"></span>
+                    Engine: Bevy <br />
+                    Language: Rust <br />
+                    Independent Project
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <section
+              class="project-page-article-section Scroll_to span-column-1"
+            >
+              <h2 id="Reason_Created">Why Was This Created?</h2>
+              <hr />
+              <p>
+                Made as a way to learn the Rust programming language and the Bevy game engine. As well as experiment with rust-wasm builds.
+              </p>
+              <p>
+                This project made me very comfortable with Rust and Bevy, and made me better understand how to setup projects for success when targeting wasm compilations.
+              </p>
+            </section>
+
+              <div
+                class="project-page-showcase-image"
+              >
+              <div
+                class="project-page-showcase-image-sorting"
+              ></div>
+              <div
+                class="project-page-showcase-image-sorting_2"
+              ></div>
+            </div>
+
+            <section
+              class="project-page-article-section Scroll_to span-column-1 project-page-article-section_sorting"
+            >
+              <h2 id="Learn">Biggest Challenge & What I Learned</h2>
+              <hr />
+              <ul>
+                <li>
+                  <div class="accordion-wrapper accordion-wrapper_non-media">
+                    <input
+                      type="checkbox"
+                      class="accordion-checkbox"
+                      id="accordion-checkbox-roles-First3D"
+                      aria-label="toggle details"
+                      aria-checked="true"
+                      checked
+                    />
+
+                    <label
+                      class="accordion-checkbox-label"
+                      for="accordion-checkbox-roles-First3D"
+                    >
+                      <h4 class="accordion-header">First WASM Project</h4>
+                    </label>
+
+                    <p class="project-page-details-text accordion-text-wrapper project-page-article-p-full_sort">
+                      <span class="accordion-text-wrapper_marker"></span>
+                      This project was made twice. First, as a way to get into Rust/Bevy. Second, with wasm as a primary consideration, which I had thought at the start required no multi-threading (which I had in the first build).
+                    </p>
+                    <p class="project-page-details-text accordion-text-wrapper project-page-article-p-full_sort">
+                      <span class="accordion-text-wrapper_marker"></span>
+                      The first project taught me multi-threading (e.g., dealing with Arc's, Mutex's, locks, atomic types, threads, etc.). At most, the current rendition of the program only uses 
+                        <span class="external-link"
+                          ><a
+                            target="_blank"
+                            href="https://docs.rs/futures-channel/latest/futures_channel/mpsc/index.html"
+                            aria-label="Open mpsc rust/cargo docs"
+                            rel="external noopener"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                          >
+                            <span class="in_text-link">MPSC channels</span>
+                            <svg
+                              class="external-link-SVG"
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 28.7 21.7"
+                            >
+                              <line
+                                class="st0"
+                                x1="14"
+                                y1="12.7"
+                                x2="22.4"
+                                y2="4.4"
+                              />
+                              <polygon
+                                class="st1"
+                                points="23.1,8.8 24.9,1.9 18,3.8"
+                              />
+                          <polyline
+                            class="st2"
+                            points="15.1,5.6 12.2,2.9 5.3,3 5.3,20.1 23.4,20.1 23.4,14.9 21.5,11.9 "
+                          />
+                        </svg> </a
+                    ></span>
+                     for loading in user-selected audio in web builds.
+                    </p>
+                    <p class="project-page-details-text accordion-text-wrapper project-page-article-p-full_sort">
+                      <span class="accordion-text-wrapper_marker"></span>
+                      The main difference: in the first version, multi-threading felt necessary since the sorting algorithms were done in loops, which of course blocked the main thread (e.g., could not rotate camera while sorting was running). The sorting algorithms were put in their own thread, which freed up interactivity for the rest of the program. I thought Web/Wasm targets do not allow multiple threads, and as such, the program was made again with incremental versions of the sorting algorithms, and then were called many times per frame depending on a modifiable frame budget variable (e.g., if frame budget was 4ms, sorting would increment as many times as it could in those 4ms) so nothing was blocked and everything could run on the web since multiple threads were not used.
+                    </p>
+                    <p class="project-page-details-text accordion-text-wrapper project-page-article-p-full_sort">
+                      <span class="accordion-text-wrapper_marker"></span>
+                      I now realize that wasm and modern web browsers can support multiple threads, and even though bevy (as of the time of writing this) is still
+                        <span class="external-link"
+                          ><a
+                            target="_blank"
+                            href="https://github.com/bevyengine/bevy/issues/4078"
+                            aria-label="Open bevy's github issue of multi-threaded support on the web"
+                            rel="external noopener"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                          >
+                            <span class="in_text-link">experimenting with supporting it</span>
+                            <svg
+                              class="external-link-SVG"
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 28.7 21.7"
+                            >
+                              <line
+                                class="st0"
+                                x1="14"
+                                y1="12.7"
+                                x2="22.4"
+                                y2="4.4"
+                              />
+                              <polygon
+                                class="st1"
+                                points="23.1,8.8 24.9,1.9 18,3.8"
+                              />
+                          <polyline
+                            class="st2"
+                            points="15.1,5.6 12.2,2.9 5.3,3 5.3,20.1 23.4,20.1 23.4,14.9 21.5,11.9 "
+                          />
+                        </svg> </a
+                    ></span>
+                      , I believe that given all I've learned working on this, I could write this program a third time and have parallel sorting on both native and web builds.
+                    </p>
+                    <p class="project-page-details-text accordion-text-wrapper project-page-article-p-full_sort">
+                      <span class="accordion-text-wrapper_marker"></span>
+                      The experience gained from working on the first version made the second version far better and development ran smoother as I had already gained experience working with Rust/Bevy, and all I had to learn was wasm and rust-wasm bindings, which were relatively easier in comparison.
+                    </p>
+                  </div>
+                </li>
+                <li>
+                  <div class="accordion-wrapper accordion-wrapper_non-media">
+                    <input
+                      type="checkbox"
+                      class="accordion-checkbox"
+                      id="accordion-checkbox-roles-Scope"
+                      aria-label="toggle details"
+                      aria-checked="true"
+                      checked
+                    />
+                    <label
+                      class="accordion-checkbox-label"
+                      for="accordion-checkbox-roles-Scope"
+                    >
+                    <h4 class="accordion-header">Swap-Based Merge Sort</h4>
+                    </label>
+
+                    <p class="project-page-details-text accordion-text-wrapper project-page-article-p-full_sort">
+                      <span class="accordion-text-wrapper_marker"></span>
+                      This program currently only visualizes swap-based algorithms as they are the easiest to visualize. Traditionally, merge sort is not swap-based, but it can be made to be swap-based as detailed below. I essentially made this up myself and if there are online resources that describe this same method, I did not utilize them at all. Of course the
+                        <span class="external-link"
+                          ><a
+                            target="_blank"
+                            href="https://github.com/ArshvirGoraya/3D-Sorting-Visualizer/blob/main/src/sorter/merge_sort.rs"
+                            aria-label="Open source code of implemented merge sort algorithm on github"
+                            rel="external noopener"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                          >
+                            <span class="in_text-link">source code</span>
+                            <svg
+                              class="external-link-SVG"
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 28.7 21.7"
+                            >
+                              <line
+                                class="st0"
+                                x1="14"
+                                y1="12.7"
+                                x2="22.4"
+                                y2="4.4"
+                              />
+                              <polygon
+                                class="st1"
+                                points="23.1,8.8 24.9,1.9 18,3.8"
+                              />
+                          <polyline
+                            class="st2"
+                            points="15.1,5.6 12.2,2.9 5.3,3 5.3,20.1 23.4,20.1 23.4,14.9 21.5,11.9 "
+                          />
+                        </svg> </a
+                    ></span>
+                      is available but this gives a rough overview of how it is done.
+                    </p>
+                    <p class="project-page-details-text accordion-text-wrapper project-page-article-p-full_sort">
+                      <span class="accordion-text-wrapper_marker"></span>
+                      Fundamentally, merge sort builds a "K" array by comparing elements between 2 split arrays and simply iterating through them until all the elements are placed inside the "K" array in order. At first, the 2 arrays are just the size of 1, so the "K" array being built is of size 2. Then the 2 arrays have the size of 2, and so the size of "K" array is 4, and so on until "K" is the size of the entire input list, which will, at that point, be an ordered/sorted list. For a more detailed explanation, consider a more 
+                        <span class="external-link"
+                          ><a
+                            target="_blank"
+                            href="https://www.youtube.com/watch?v=IN_ZOU-LK08"
+                            aria-label="link to youtube video going over merge sort"
+                            rel="external noopener"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                          >
+                            <span class="in_text-link">focussed overview</span>
+                            <svg
+                              class="external-link-SVG"
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 28.7 21.7"
+                            >
+                              <line
+                                class="st0"
+                                x1="14"
+                                y1="12.7"
+                                x2="22.4"
+                                y2="4.4"
+                              />
+                              <polygon
+                                class="st1"
+                                points="23.1,8.8 24.9,1.9 18,3.8"
+                              />
+                          <polyline
+                            class="st2"
+                            points="15.1,5.6 12.2,2.9 5.3,3 5.3,20.1 23.4,20.1 23.4,14.9 21.5,11.9 "
+                          />
+                        </svg> </a
+                    ></span>
+                      of the subject matter.
+                    </p>
+                    <p class="project-page-details-text accordion-text-wrapper project-page-article-p-full_sort">
+                      <span class="accordion-text-wrapper_marker"></span>
+                      The way this program makes merge sort be swap-based is by tracking where elements of the "left" array go after being swapped. For example, imagine that the input is currently "2, 5, 6, 10, 1, 3, 4, 7, 8, 9", the 2 arrays are of size 4, and the "K" array needs to be of size 8 before the next loop around, but starts at 0. Elements 0-3 are in Left Array ("2, 5, 6, 10") and elements 4-8 are in Right Array ("1, 3, 4, 7"). We begin comparing element-by-element: "2" from Left Array is bigger than "1" from Right Array, so it gets swapped with the element at "K" index, currently at "2". Now the input looks like this: "1, 5, 6, 10, 2, 3, 4, 7, 8, 9." For the next comparison, K increments to a 1, Right Array increments to point to its next element "3". Since Left Array must still point to "2" for future comparisons, it updates where it is pointing to. It does so by putting its element's new position/index into a queue, or a 
+                        <span class="external-link"
+                          ><a
+                            target="_blank"
+                            href="https://doc.rust-lang.org/std/collections/struct.VecDeque.html"
+                            aria-label="link to rust documentation of VecDeque"
+                            rel="external noopener"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                          >
+                            <span class="in_text-link">VecDeque</span>
+                            <svg
+                              class="external-link-SVG"
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 28.7 21.7"
+                            >
+                              <line
+                                class="st0"
+                                x1="14"
+                                y1="12.7"
+                                x2="22.4"
+                                y2="4.4"
+                              />
+                              <polygon
+                                class="st1"
+                                points="23.1,8.8 24.9,1.9 18,3.8"
+                              />
+                          <polyline
+                            class="st2"
+                            points="15.1,5.6 12.2,2.9 5.3,3 5.3,20.1 23.4,20.1 23.4,14.9 21.5,11.9 "
+                          />
+                        </svg> </a
+                    ></span>
+                      in Rust. This is the gist of it, whenever Right Array swaps with a element in the Left Array, it simply adds that element's new index into the queue to track it for later comparisons. They are removed from the queue when they are smaller in a comparison and swap places with wherever the "K" index is at that comparison. There is only one more important aspect to be aware of.
+                    </p>
+                    <p class="project-page-details-text accordion-text-wrapper project-page-article-p-full_sort">
+                      <span class="accordion-text-wrapper_marker"></span>
+                      There are cases where an element's position in the queue has to be updated. For example, say that the input is currently "1, 2, 3, 4, 5, 6, 10, 7, 8, 9", K is currently at a 6, Left Array is pointing at "10" (which is at the 6th index) and Right Array is pointing at "7". "7" is smaller than "10", so we swap. Right Array increments, and importantly, because the position of the element in Left Array's queue has changed ("10" was at 6, but now is at 7), we update the element in the queue to point to its new location. At the end, the input looks like this: "1, 2, 3, 4, 5, 6, 7, 10, 8, 9." With Left Array still pointing at 10. So, ultimately, Left Array simply uses a queue to keep track of where its next elements go for future comparisons and updates their positions if required. With this, you can do merge sort with only swaps.
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </section>
+
+
+<!-- 
+            <section class="project-page-article-section Scroll_to">
+              <h2 id="Learn">Biggest Challenge & What I Learned</h2>
+              <hr />
+              <div
+                class="project-page_description-and-video-wrapper project-page_description-and-video-wrapper_BiggestChallenge"
+              >
+                <div class="project-page-Media-and-Accordion-wrapper-float project-page-Media-and-Accordion-wrapper-float_sorting">
+                  <div
+                    class="project-page-Media-and-Accordion-wrapper project-page-Media-and-Accordion-wrapper_sorting"
+                  >
+                    <div
+                      class="project-page-media project-page-media_sorting"
+                    >
+                    </div>
+                    <img
+                      class="project-page-media project-page-media_sorting"
+                      src="/images/merge sort loop.jpg"
+                      alt="picture demonstrating an iteration through merge sort"
+                    />
+                  </div>
+                </div>
+                <div class="project-page_descriptionText">
+                  <ul>
+                    <li>
+                      <div class="accordion-wrapper accordion-wrapper_non-media">
+                        <input
+                          type="checkbox"
+                          class="accordion-checkbox"
+                          id="accordion-checkbox-roles-First3D"
+                          aria-label="toggle details"
+                          aria-checked="true"
+                          checked
+                        />
+
+                        <label
+                          class="accordion-checkbox-label"
+                          for="accordion-checkbox-roles-First3D"
+                        >
+                          <h4 class="accordion-header">First WASM Project</h4>
+                        </label>
+
+                        <p class="project-page-details-text accordion-text-wrapper project-page-article-p-full_complete">
+                          <span class="accordion-text-wrapper_marker"></span>
+                          This project was made twice. First, as a way to get into Rust/Bevy. Second, with wasm as a primary consideration, which I had thought at the start required no multi-threading (which I had in the first build).
+                        </p>
+                        <p class="project-page-details-text accordion-text-wrapper project-page-article-p-full_complete">
+                          <span class="accordion-text-wrapper_marker"></span>
+                          The first project taught me multi-threading (e.g., dealing with Arc's, Mutex's, locks, atomic types, threads, etc.). At most, the current rendition of the program only uses 
+                            <span class="external-link"
+                              ><a
+                                target="_blank"
+                                href="https://docs.rs/futures-channel/latest/futures_channel/mpsc/index.html"
+                                aria-label="Open mpsc rust/cargo docs"
+                                rel="external noopener"
+                                referrerpolicy="strict-origin-when-cross-origin"
+                              >
+                                <span class="in_text-link">MPSC channels</span>
+                                <svg
+                                  class="external-link-SVG"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 28.7 21.7"
+                                >
+                                  <line
+                                    class="st0"
+                                    x1="14"
+                                    y1="12.7"
+                                    x2="22.4"
+                                    y2="4.4"
+                                  />
+                                  <polygon
+                                    class="st1"
+                                    points="23.1,8.8 24.9,1.9 18,3.8"
+                                  />
+                              <polyline
+                                class="st2"
+                                points="15.1,5.6 12.2,2.9 5.3,3 5.3,20.1 23.4,20.1 23.4,14.9 21.5,11.9 "
+                              />
+                            </svg> </a
+                        ></span>
+                        for loading in user-selected audio in web builds.
+                        </p>
+                        <p class="project-page-details-text accordion-text-wrapper project-page-article-p-full_complete">
+                          <span class="accordion-text-wrapper_marker"></span>
+                          The main difference: in the first version, multi-threading felt necessary since the sorting algorithms were done in loops, which of course blocked the main thread (e.g., could not rotate camera while sorting was running). The sorting algorithms were put in their own thread, which freed up interactivity for the rest of the program. I thought Web/Wasm targets do not allow multiple threads, and as such, the program was made again with incremental versions of the sorting algorithms, and then were called many times per frame depending on a modifiable frame budget variable (e.g., if frame budget was 4ms, sorting would increment as many times as it could in those 4ms) so nothing was blocked and everything could run on the web since multiple threads were not used.
+                        </p>
+                        <p class="project-page-details-text accordion-text-wrapper project-page-article-p-full_complete">
+                          <span class="accordion-text-wrapper_marker"></span>
+                          I now realize that wasm and modern web browsers can support multiple threads, and even though bevy (as of the time of writing this) is still
+                            <span class="external-link"
+                              ><a
+                                target="_blank"
+                                href="https://github.com/bevyengine/bevy/issues/4078"
+                                aria-label="Open bevy's github issue of multi-threaded support on the web"
+                                rel="external noopener"
+                                referrerpolicy="strict-origin-when-cross-origin"
+                              >
+                                <span class="in_text-link">experimenting with supporting it</span>
+                                <svg
+                                  class="external-link-SVG"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 28.7 21.7"
+                                >
+                                  <line
+                                    class="st0"
+                                    x1="14"
+                                    y1="12.7"
+                                    x2="22.4"
+                                    y2="4.4"
+                                  />
+                                  <polygon
+                                    class="st1"
+                                    points="23.1,8.8 24.9,1.9 18,3.8"
+                                  />
+                              <polyline
+                                class="st2"
+                                points="15.1,5.6 12.2,2.9 5.3,3 5.3,20.1 23.4,20.1 23.4,14.9 21.5,11.9 "
+                              />
+                            </svg> </a
+                        ></span>
+                          , I believe that given all I've learned working on this, I could write this program a third time and have parallel sorting on both native and web builds.
+                        </p>
+                        <p class="project-page-details-text accordion-text-wrapper project-page-article-p-full_complete">
+                          <span class="accordion-text-wrapper_marker"></span>
+                          The experience gained from working on the first version made the second version far better and development ran smoother as I had already gained experience working with Rust/Bevy, and all I had to learn was wasm and rust-wasm bindings, which were relatively easier in comparison.
+                        </p>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="accordion-wrapper accordion-wrapper_non-media">
+                        <input
+                          type="checkbox"
+                          class="accordion-checkbox"
+                          id="accordion-checkbox-roles-Scope"
+                          aria-label="toggle details"
+                          aria-checked="true"
+                          checked
+                        />
+                        <label
+                          class="accordion-checkbox-label"
+                          for="accordion-checkbox-roles-Scope"
+                        >
+                        <h4 class="accordion-header">Swap-Based Merge Sort</h4>
+                        </label>
+
+                        <p class="project-page-details-text accordion-text-wrapper project-page-article-p-full_complete">
+                          <span class="accordion-text-wrapper_marker"></span>
+                          This program currently only visualizes swap-based algorithms as they are the easiest to visualize. Traditionally, merge sort is not swap-based, but it can be made to be swap-based as detailed below. I essentially made this up myself and if there are online resources that describe this same method, I did not utilize them at all. Of course the
+                            <span class="external-link"
+                              ><a
+                                target="_blank"
+                                href="https://github.com/ArshvirGoraya/3D-Sorting-Visualizer/blob/main/src/sorter/merge_sort.rs"
+                                aria-label="Open source code of implemented merge sort algorithm on github"
+                                rel="external noopener"
+                                referrerpolicy="strict-origin-when-cross-origin"
+                              >
+                                <span class="in_text-link">source code</span>
+                                <svg
+                                  class="external-link-SVG"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 28.7 21.7"
+                                >
+                                  <line
+                                    class="st0"
+                                    x1="14"
+                                    y1="12.7"
+                                    x2="22.4"
+                                    y2="4.4"
+                                  />
+                                  <polygon
+                                    class="st1"
+                                    points="23.1,8.8 24.9,1.9 18,3.8"
+                                  />
+                              <polyline
+                                class="st2"
+                                points="15.1,5.6 12.2,2.9 5.3,3 5.3,20.1 23.4,20.1 23.4,14.9 21.5,11.9 "
+                              />
+                            </svg> </a
+                        ></span>
+                          is available but this gives a rough overview of how it is done.
+                        </p>
+                        <p class="project-page-details-text accordion-text-wrapper project-page-article-p-full_complete">
+                          <span class="accordion-text-wrapper_marker"></span>
+                          Fundamentally, merge sort builds a "K" array by comparing elements between 2 split arrays and simply iterating through them until all the elements are placed inside the "K" array in order. At first, the 2 arrays are just the size of 1, so the "K" array being built is of size 2. Then the 2 arrays have the size of 2, and so the size of "K" array is 4, and so on until "K" is the size of the entire input list, which will, at that point, be an ordered/sorted list. For a more detailed explanation, consider a more 
+                            <span class="external-link"
+                              ><a
+                                target="_blank"
+                                href="https://www.youtube.com/watch?v=IN_ZOU-LK08"
+                                aria-label="link to youtube video going over merge sort"
+                                rel="external noopener"
+                                referrerpolicy="strict-origin-when-cross-origin"
+                              >
+                                <span class="in_text-link">focussed overview</span>
+                                <svg
+                                  class="external-link-SVG"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 28.7 21.7"
+                                >
+                                  <line
+                                    class="st0"
+                                    x1="14"
+                                    y1="12.7"
+                                    x2="22.4"
+                                    y2="4.4"
+                                  />
+                                  <polygon
+                                    class="st1"
+                                    points="23.1,8.8 24.9,1.9 18,3.8"
+                                  />
+                              <polyline
+                                class="st2"
+                                points="15.1,5.6 12.2,2.9 5.3,3 5.3,20.1 23.4,20.1 23.4,14.9 21.5,11.9 "
+                              />
+                            </svg> </a
+                        ></span>
+                          of the subject matter.
+                        </p>
+                        <p class="project-page-details-text accordion-text-wrapper project-page-article-p-full_complete">
+                          <span class="accordion-text-wrapper_marker"></span>
+                          The way this program makes merge sort be swap-based is by tracking where elements of the "left" array go after being swapped. For example, imagine that the input is currently "2, 5, 6, 10, 1, 3, 4, 7, 8, 9", the 2 arrays are of size 4, and the "K" array needs to be of size 8 before the next loop around, but starts at 0. Elements 0-3 are in Left Array ("2, 5, 6, 10") and elements 4-8 are in Right Array ("1, 3, 4, 7"). We begin comparing element-by-element: "2" from Left Array is bigger than "1" from Right Array, so it gets swapped with the element at "K" index, currently at "2". Now the input looks like this: "1, 5, 6, 10, 2, 3, 4, 7, 8, 9." For the next comparison, K increments to a 1, Right Array increments to point to its next element "3". Since Left Array must still point to "2" for future comparisons, it updates where it is pointing to. It does so by putting its element's new position/index into a queue, or a 
+                            <span class="external-link"
+                              ><a
+                                target="_blank"
+                                href="https://doc.rust-lang.org/std/collections/struct.VecDeque.html"
+                                aria-label="link to rust documentation of VecDeque"
+                                rel="external noopener"
+                                referrerpolicy="strict-origin-when-cross-origin"
+                              >
+                                <span class="in_text-link">VecDeque</span>
+                                <svg
+                                  class="external-link-SVG"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 28.7 21.7"
+                                >
+                                  <line
+                                    class="st0"
+                                    x1="14"
+                                    y1="12.7"
+                                    x2="22.4"
+                                    y2="4.4"
+                                  />
+                                  <polygon
+                                    class="st1"
+                                    points="23.1,8.8 24.9,1.9 18,3.8"
+                                  />
+                              <polyline
+                                class="st2"
+                                points="15.1,5.6 12.2,2.9 5.3,3 5.3,20.1 23.4,20.1 23.4,14.9 21.5,11.9 "
+                              />
+                            </svg> </a
+                        ></span>
+                          in Rust. This is the gist of it, whenever Right Array swaps with a element in the Left Array, it simply adds that element's new index into the queue to track it for later comparisons. They are removed from the queue when they are smaller in a comparison and swap places with wherever the "K" index is at that comparison. There is only one more important aspect to be aware of.
+                        </p>
+                        <p class="project-page-details-text accordion-text-wrapper project-page-article-p-full_complete">
+                          <span class="accordion-text-wrapper_marker"></span>
+                          There are cases where an element's position in the queue has to be updated. For example, say that the input is currently "1, 2, 3, 4, 5, 6, 10, 7, 8, 9", K is currently at a 6, Left Array is pointing at "10" (which is at the 6th index) and Right Array is pointing at "7". "7" is smaller than "10", so we swap. Right Array increments, and importantly, because the position of the element in Left Array's queue has changed ("10" was at 6, but now is at 7), we update the element in the queue to point to its new location. At the end, the input looks like this: "1, 2, 3, 4, 5, 6, 7, 10, 8, 9." With Left Array still pointing at 10. So, ultimately, Left Array simply uses a queue to keep track of where its next elements go for future comparisons and updates their positions if required. With this, you can do merge sort with only swaps.
+                        </p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </section> -->
+
+
+
+            <!-- <section class="project-page-article-section Scroll_to">
+              <h2 id="Details">Details</h2>
+              <hr />
+              <div class="project-page_description-and-video-wrapper project-page_description-and-video-wrapper_BiggestChallenge">
+                <div class="project-page_descriptionText">
+                  <p>
+                    UI: the ui framework used is Egui, specifically bevy-egui, which has a lot of features that are shown directly in the app: text edits, color pickers, checkboxes, buttons, sliders, floating windows, etc. It uses a builder pattern, which allows chaining methods on ui elements to build them which is a treat to work with. At the time of writing this, it is the most feature rich UI solution in Rust. My only gripe is, it is not retained mode. It is immediate mode, which means it creates all the ui elements every frame. I assumed this would impact performance, but it actually had very little impact on the program.
+                  </p>
+                </div>
+              </div>
+            </section> -->
+
+            <section class="project-page-article-section Scroll_to">
+              <h2 id="Download">Download</h2>
+              <hr />
+              <div class="download-text-wrapper">
+                <p>Download here or on GitHub.</p>
+              </div>
+              <div class="project-page-download-wrapper">
+                <ul class="requirementList">
+                  <h4><span class="highlight">Requirements: </span></h4>
+                  <li>OS: Windows</li>
+                  <li>Keyboard</li>
+                  <li>Mouse</li>
+                </ul>
+                <ul
+                  class="project-links-container project-page-project-links-container"
+                >
+                  <li
+                    class="project-link-container project-page-project-link-container"
+                  >
+                    <a
+                      class="project-link"
+                      href="https://github.com/ArshvirGoraya/3D-Sorting-Visualizer/releases"
+                      aria-label="link to Github.com page for this program"
+                      target="_blank"
+                      rel="external noopener"
+                      referrerpolicy="strict-origin-when-cross-origin"
+                    >
+                        <svg
+                          viewBox="0 0 32.6 31.8"
+                          class="project-link-svg project-link-svg_github"
+                        >
+                        <path
+                          d="M16.3,0C7.3,0,0,7.3,0,16.3c0,7.2,4.7,13.3,11.1,15.5c0.8,0.1,1.1-0.4,1.1-0.8s0-1.4,0-2.8
+                             c-4.5,1-5.5-2.2-5.5-2.2c-0.7-1.9-1.8-2.4-1.8-2.4c-1.5-1,0.1-1,0.1-1c1.6,0.1,2.5,1.7,2.5,1.7c1.5,2.5,3.8,1.8,4.7,1.4
+                             c0.1-1.1,0.6-1.8,1-2.2c-3.6-0.4-7.4-1.8-7.4-8.1c0-1.8,0.6-3.2,1.7-4.4c-0.1-0.3-0.7-2,0.2-4.2c0,0,1.4-0.4,4.5,1.7
+                             C13.5,8.1,14.9,8,16.3,8s2.8,0.2,4.1,0.5c3.1-2.1,4.5-1.7,4.5-1.7c0.9,2.2,0.3,3.9,0.2,4.3c1,1.1,1.7,2.6,1.7,4.4
+                             c0,6.3-3.8,7.6-7.4,8c0.6,0.5,1.1,1.5,1.1,3c0,2.2,0,3.9,0,4.5c0,0.4,0.3,0.9,1.1,0.8c6.5-2.2,11.1-8.3,11.1-15.5
+                             C32.6,7.3,25.3,0,16.3,0z"
+                        />
+                        </svg>
+                    </a>
+                  </li>
+                  <li
+                    class="project-link-container project-page-project-link-container"
+                  >
+                    <a
+                      class="project-link"
+                      aria-label="download this game"
+                      download
+                      href="/downloads\3D_Sorting_Visualizer_Win64.zip"
+                      rel="noopener"
+                      referrerpolicy="strict-origin-when-cross-origin"
+                    >
+                      <svg
+                        viewBox="0 0 28.7 21.7"
+                        class="project-link-svg project-link-svg_download"
+                      >
+                        <line class="st0" x1="14.4" y1="1" x2="14.4" y2="9.5" />
+                        <polygon
+                          class="st1"
+                          points="10.8,8.5 14.4,14.7 17.9,8.5"
+                        />
+                        <polyline
+                          class="st2"
+                          points="5.4,14 5.4,20.2 23.5,20.2 23.5,14"
+                        />
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </section>
+          </article>
+        </section>
+      </div>
+
+      <!--  -->
+      <!--  -->
+      <!--  -->
+      <!--  -->
+      <!--  -->
+      <footer class="footer" tabindex="-1">
+        <!-- need tabindex -1 to not be focusable-->
+
+        <div class="footer-wrapper">
+          <div class="footer-curve">
+            <svg viewBox="0 0 200 1">
+              <circle cx="25" cy="2" r="3" class="footer-circle" />
+            </svg>
+
+            <svg viewBox="0 0 200 4" class="footer-curve-svg">
+              <polygon
+                class="background"
+                opacity="0.25"
+                points="150,0.4 125,4 100,0.4 75,4 50,0.4 25,4 0,0.4 0,7.7 200,7.7 200,0.4 175,4 "
+              />
+              <path
+                class="middleground"
+                opacity="0.7"
+                d="M175,7c-12.5,0-12.5-7-25-7s-12.5,7-25,7s-12.5-7-25-7S87.5,7,75,7S62.5,0,50,0S37.5,7,25,7S12.5,0,0,0v7.7h200
+                V0C187.5,0,187.5,7,175,7z"
+              />
+              <path
+                class="foreground"
+                d="M100,1.1c-25,0-25,5.7-50,5.7S25,1.1,0,1.1V16h200V1.1c-25,0-25,5.7-50,5.7S125,1.1,100,1.1z"
+              />
+            </svg>
+          </div>
+          <ul class="footer__list">
+            <p class="debug-text" style="color: red"></p>
+
+            <li class="footer__email">
+              <a
+                class="footer__email-link"
+                href="mailto:ArshvirGoraya@outlook.com"
+                aria-label="E-mail"
+                rel="noopener"
+                referrerpolicy="strict-origin-when-cross-origin"
+                >ArshvirGoraya@outlook.com</a
+              >
+            </li>
+            <li class="footer-links-wrapper">
+              <ul>
+                <li>
+                  <a
+                    class="PDF_link footer__link"
+                    target="_blank"
+                    href="/PDFs\ArshvirGoraya_Resume.pdf"
+                    rel="noopener"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    aria-label="Résumé"
+                    data-PDF_alt="PDFs\PDF_Resume.html"
+                    >Résumé
+                    <svg class="external-link-SVG" viewBox="0 0 28.7 21.7">
+                      <line class="st0" x1="14" y1="12.7" x2="22.4" y2="4.4" />
+                      <polygon class="st1" points="23.1,8.8 24.9,1.9 18,3.8" />
+                      <polyline
+                        class="st2"
+                        points="15.1,5.6 12.2,2.9 5.3,3 5.3,20.1 23.4,20.1 23.4,14.9 21.5,11.9 "
+                      />
+                    </svg>
+                  </a>
+                </li>
+                <div class="vertical-seperator">|</div>
+                <li>
+                  <a
+                    class="footer__link"
+                    href="https://www.linkedin.com/in/arshvir-goraya-1b2739266/"
+                    aria-label="Go to my linked in page"
+                    target="_blank"
+                    rel="external noopener"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    >LinkedIn
+                    <svg class="external-link-SVG" viewBox="0 0 28.7 21.7">
+                      <line class="st0" x1="14" y1="12.7" x2="22.4" y2="4.4" />
+                      <polygon class="st1" points="23.1,8.8 24.9,1.9 18,3.8" />
+                      <polyline
+                        class="st2"
+                        points="15.1,5.6 12.2,2.9 5.3,3 5.3,20.1 23.4,20.1 23.4,14.9 21.5,11.9 "
+                      />
+                    </svg>
+                  </a>
+                </li>
+                <!-- <div class="vertical-seperator">|</div>
+                <li>
+                  <a
+                    class="footer__link"
+                    href="https://arshvirgoraya.itch.io/"
+                    aria-label="Go to my Itch.io page"
+                    target="_blank"
+                    rel="external noopener"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    >Itch.io
+                    <svg class="external-link-SVG" viewBox="0 0 28.7 21.7">
+                      <line class="st0" x1="14" y1="12.7" x2="22.4" y2="4.4" />
+                      <polygon class="st1" points="23.1,8.8 24.9,1.9 18,3.8" />
+                      <polyline
+                        class="st2"
+                        points="15.1,5.6 12.2,2.9 5.3,3 5.3,20.1 23.4,20.1 23.4,14.9 21.5,11.9 "
+                      />
+                    </svg>
+                  </a>
+                </li> -->
+                <!-- <div class="vertical-seperator">|</div>
+                <li>
+                  <a
+                    class="footer__link"
+                    href="https://github.com/ArshvirGoraya"
+                    aria-label="Go to my Github page"
+                    target="_blank"
+                    rel="external noopener"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    >Github
+                    <svg class="external-link-SVG" viewBox="0 0 28.7 21.7">
+                      <line class="st0" x1="14" y1="12.7" x2="22.4" y2="4.4" />
+                      <polygon class="st1" points="23.1,8.8 24.9,1.9 18,3.8" />
+                      <polyline
+                        class="st2"
+                        points="15.1,5.6 12.2,2.9 5.3,3 5.3,20.1 23.4,20.1 23.4,14.9 21.5,11.9 "
+                      />
+                    </svg>
+                  </a>
+                </li> -->
+                <!-- <div class="vertical-seperator">|</div>
+                <li>
+                  <a
+                    class="footer__link"
+                    href="https://www.youtube.com/@ArshvirGoraya"
+                    aria-label="Go to my youtube page"
+                    target="_blank"
+                    rel="external noopener"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    >Youtube
+                    <svg class="external-link-SVG" viewBox="0 0 28.7 21.7">
+                      <line class="st0" x1="14" y1="12.7" x2="22.4" y2="4.4" />
+                      <polygon class="st1" points="23.1,8.8 24.9,1.9 18,3.8" />
+                      <polyline
+                        class="st2"
+                        points="15.1,5.6 12.2,2.9 5.3,3 5.3,20.1 23.4,20.1 23.4,14.9 21.5,11.9 "
+                      />
+                    </svg>
+                  </a>
+                </li> -->
+                <div class="vertical-seperator">|</div>
+                <li>
+                  <a
+                    class="footer__link"
+                    href="https://linktr.ee/arshvirgoraya"
+                    aria-label="Go to my link tree page"
+                    target="_blank"
+                    rel="external noopener"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    >Linktree
+                    <svg class="external-link-SVG" viewBox="0 0 28.7 21.7">
+                      <line class="st0" x1="14" y1="12.7" x2="22.4" y2="4.4" />
+                      <polygon class="st1" points="23.1,8.8 24.9,1.9 18,3.8" />
+                      <polyline
+                        class="st2"
+                        points="15.1,5.6 12.2,2.9 5.3,3 5.3,20.1 23.4,20.1 23.4,14.9 21.5,11.9 "
+                      />
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="footer__copyright">
+              &copy; 2022 - 2026 Arshvir Goraya. All Rights Reserved.
+            </li>
+          </ul>
+        </div>
+      </footer>
+
+      <!--  -->
+      <!--  -->
+      <!--  -->
+      <!--  -->
+      <!--  -->
+    </div>
+    <noscript>
+      <style>
+        .accordion-text-wrapper {
+          transition-timing-function: cubic-bezier(
+            0.68,
+            -0.55,
+            0.265,
+            1.55
+          ) !important;
+        }
+      </style>
+    </noscript>
+  </body>
+</html>
